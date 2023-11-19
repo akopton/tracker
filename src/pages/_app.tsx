@@ -7,6 +7,7 @@ import { api } from "@/utils/api";
 import "@/styles/globals.css";
 import { ThemeProvider } from "@/context/ThemeContext";
 import { MainLayout } from "@/layouts/MainLayout";
+import { TabsProvider } from "@/context/TabsContext";
 
 const MyApp: AppType<{ session: Session | null }> = ({
   Component,
@@ -15,9 +16,11 @@ const MyApp: AppType<{ session: Session | null }> = ({
   return (
     <SessionProvider session={session}>
       <ThemeProvider>
-        <MainLayout>
-          <Component {...pageProps} />
-        </MainLayout>
+        <TabsProvider>
+          <MainLayout>
+            <Component {...pageProps} />
+          </MainLayout>
+        </TabsProvider>
       </ThemeProvider>
     </SessionProvider>
   );
