@@ -1,7 +1,18 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 
+:root {
+    --bg-light: white;
+    --bg-dark: gray;
+    --text-light: white;
+    --text-dark: gray;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
 
 button {
     border: none;
@@ -9,14 +20,17 @@ button {
     background: none;
 }
 
-.theme-light {
-    background: white;
-    color: gray;
+.theme {
+    padding: 20px;
     transition: all 1s ease;
 }
 
+.theme-light {
+    background: var(--bg-light);
+    color: var(--text-dark);
+}
+
 .theme-dark {
-    background: gray;
-    color: white;
-    transition: all 1s ease;
+    background: var(--bg-dark);
+    color: var(--text-light);
 }

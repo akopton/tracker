@@ -1,5 +1,7 @@
+import { TabsContext } from "@/context/TabsContext";
 import { ThemeContext } from "@/context/ThemeContext";
 import Head from "next/head";
+import Link from "next/link";
 import { useContext } from "react";
 
 export default function Home() {
@@ -13,7 +15,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main
-        className={`flex min-h-screen flex-col items-center justify-center theme-${theme}`}
+        className={`theme flex min-h-screen flex-col items-center justify-center theme-${theme}`}
       ></main>
     </>
   );
